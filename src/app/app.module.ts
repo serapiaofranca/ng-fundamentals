@@ -16,7 +16,6 @@ import { EventRouteActivator } from './events/event-details/event-route-activato
 import { EventListResolver } from './events/events-list-resolver.service'
 
 @NgModule({
-
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes)
