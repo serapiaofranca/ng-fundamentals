@@ -13,8 +13,8 @@ import { IEvent } from '../shared/index'
 export class EventDetailsComponent {
   event:IEvent
   constructor(private eventService:EventService, private route:ActivatedRoute) {
-
   }
+
   ngOnInit() {
     this.event = this.eventService.getEvent(
       +this.route.snapshot.params['id'])
