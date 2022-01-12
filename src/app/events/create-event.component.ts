@@ -14,10 +14,27 @@ import { EventService } from './shared/index'
   `]
 })
 export class CreateEventComponent {
-  newEvent
   isDirty:boolean = true
+  event:any
+
   constructor(private router:Router, private eventService:EventService){
 
+  }
+
+  ngOnInit() {
+    this.event = {
+      name: 'ng Spetacular',
+      date: '3/8/2023',
+      time: '10am',
+      price: 899.99,
+      location: {
+        address: '333 Smart st',
+        city: 'Felicity',
+        country: 'Angularization'
+      },
+      onlineUrl: 'http://ngSpetacular.com',
+      imageUrl: 'http://ngSpetacular.com/logo.png'
+    }
   }
 
   saveEvent(formValues) {
